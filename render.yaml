@@ -1,11 +1,9 @@
 services:
   - type: web
     name: finance-tracker
-    runtime: java
+    runtime: docker
     plan: free
     rootDir: backend
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar target/tracker-1.0.0.jar
     envVars:
       - key: DB_URL
         sync: false
