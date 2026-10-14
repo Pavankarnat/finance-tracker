@@ -3,7 +3,8 @@ services:
     name: finance-tracker
     runtime: docker
     plan: free
-    rootDir: backend
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
     envVars:
       - key: DB_URL
         sync: false
